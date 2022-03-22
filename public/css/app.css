@@ -11247,3 +11247,7 @@ textarea.form-control-lg {
   color: black;
   text-decoration: none;
 }
+
+.card {
+  border-radius: 25px;
+}
