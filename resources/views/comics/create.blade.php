@@ -7,8 +7,10 @@
       <a class="btn btn-secondary" href="{{route('comics.index')}}">Indietro</a>
     </div>
   </header>
+  <!-- *** FORM *** -->
   <div class="card-body">
-    <form action="" method="">
+    <form action="{{route('comics.store')}}" method="POST">
+      @csrf
       <div class="row">
         <div class="col-10">
           <div class="mb-3">
@@ -19,7 +21,7 @@
         </div>
         <div class="col-10">
           <div class="mb-3">
-            <label for="thumb" class="form-label">Inserisci Url immagine</label>
+            <label for="thumb" class="form-label">Inserisci Url immagine di copertina</label>
             <input type="text" type="url" class="form-control" id="thumb" name="thumb">
           </div>
         </div>
@@ -39,7 +41,7 @@
           <div class="col-10">
             <div class="mb-3">
               <div class="mb-3">
-                <label for="description" class="form-label">Example textarea</label>
+                <label for="description" class="form-label">Inserisci una descrizione</label>
                 <textarea class="form-control" id="description" name="description" rows="3"></textarea>
               </div>
             </div>
@@ -53,6 +55,7 @@
           </div>
         </div>
       </div>
+      <!-- ***Form buttons*** -->
       <div class="d-flex align-content-center justify-content-end">
         <button type="reset" class="btn btn-secondary m-3">Cancella</button>
         <button type="submit" class="btn btn-success m-3">Crea</button>
@@ -61,18 +64,3 @@
   </div>
 </div>
 @endsection
-
-
-<!-- <div class="col-10">
-        <div class="col-6">
-          series
-        </div>
-        <div class="col-6">
-          sale_date
-        </div>
-        <div class="col-6">
-          description
-        </div>
-        <div class="col-6">
-          price
-        </div> -->
