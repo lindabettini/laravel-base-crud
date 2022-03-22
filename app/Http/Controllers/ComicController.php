@@ -11,13 +11,12 @@ class ComicController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     class ComicController extends Controller
-     {
-         public function index()
-         {
-             $comics = Comic::all();
-             return view('comics.index', compact('comics'));
-         }
+     */
+    public function index()
+    {
+        $comics = Comic::all();
+        return view('comics.index', compact('comics'));
+    }
 
     /**
      * Show the form for creating a new resource.
