@@ -53,6 +53,10 @@
           </div>
         </div>
       </div>
+      <div class="d-flex align-content-center justify-content-end">
+        <button type="reset" class="btn btn-secondary m-3">Cancella</button>
+        <button type="submit" class="btn btn-success m-3">Crea</button>
+      </div>
     </form>
   </div>
 </div>
