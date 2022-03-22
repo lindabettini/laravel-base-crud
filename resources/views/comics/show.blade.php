@@ -11,6 +11,7 @@
       <h5>{{$comic->sale_date}}</h5>
       <p>{{$comic->description}}</p>
       <div><strong>Prezzo: €{{$comic->price}}</strong></div>
+      <a class="btn btn-secondary" href="{{route('comics.index')}}">Indietro</a>
     </div>
   </div>
 </div>
