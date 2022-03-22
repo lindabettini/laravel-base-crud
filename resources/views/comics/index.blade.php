@@ -1,7 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
-<h1>Comics</h1>
+<header class="d-flex justify-content-evenly">
+  <h1>Comics</h1>
+  <a class="btn btn-primary m-3" href="{{route('comics.create')}}">Aggiungi un Comic</a>
+</header>
+
 <div id="comics-list" class="row text-center justify-content-center">
   @foreach ($comics as $comic)
   <dic class="col-5 p-3 m-3">
@@ -17,6 +21,5 @@
     </a>
   </dic>
   @endforeach
-
 </div>
 @endsection
