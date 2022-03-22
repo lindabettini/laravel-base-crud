@@ -11243,3 +11243,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#comics-list a {
+  color: black;
+  text-decoration: none;
+}
