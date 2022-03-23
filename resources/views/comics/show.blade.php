@@ -3,6 +3,7 @@
 @section('content')
 
 <div id="card-details" class="container">
+  <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary">Modifica</a>
   <div id="comics-list" class="row text-center justify-content-center">
     <div class="card p-3 m-3 d-flex justify-content-center">
       <h3>{{$comic->title}}</h3>
