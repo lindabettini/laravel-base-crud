@@ -17,7 +17,10 @@
         <h5>{{$comic->sale_date}}</h5>
         <p>{{$comic->description}}</p>
         <div><strong>Prezzo: €{{$comic->price}}</strong></div>
-        <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary">Modifica</a>
+        <div class="row justify-content-evenly">
+          <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary m-3 btn-100">Modifica</a>
+          <a href="{{route('comics.index', $comic->id)}}" class="btn btn-danger m-3 btn-100">Elimina</a>
+        </div>
       </div>
     </a>
   </dic>
