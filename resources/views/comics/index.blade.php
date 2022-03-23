@@ -18,8 +18,14 @@
         <p>{{$comic->description}}</p>
         <div><strong>Prezzo: €{{$comic->price}}</strong></div>
         <div class="row justify-content-evenly">
-          <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary m-3 btn-100">Modifica</a>
-          <a href="{{route('comics.index', $comic->id)}}" class="btn btn-danger m-3 btn-100">Elimina</a>
+          <div class="col-6"> <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary m-3 btn-100">Modifica</a></div>
+          <div class="col-6">
+            <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+              @method('DELETE')
+              @csrf
+              <button class="btn btn-danger m-3 btn-100">Elimina</button>
+            </form>
+          </div>
         </div>
       </div>
     </a>
