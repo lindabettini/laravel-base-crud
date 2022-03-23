@@ -67,11 +67,24 @@
         </div>
       </div>
       <!-- ***Form buttons*** -->
-      <div class="d-flex align-content-center justify-content-end">
-        <button type="reset" class="btn btn-secondary m-3">Cancella</button>
-        <button type="submit" class="btn btn-success m-3">Crea</button>
+      <div class="row align-content-center">
+        <div class="col-6"> <button type="reset" class="btn btn-secondary m-3">Cancella</button>
+          <button type="submit" class="btn btn-success m-3">Crea</button>
+        </div>
+        <div class="col-6">
+          <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button class="btn btn-danger m-3 btn-100">Elimina</button>
+          </form>
+        </div>
       </div>
-    </form>
+
   </div>
+  </form>
+
+
+
+</div>
 </div>
 @endsection
