@@ -52,7 +52,7 @@
           <div class="col-10">
             <div class="mb-3">
               <div class="mb-3">
-                <label for="description" class="form-label"></label>
+                <label for="description" class="form-label">Descrizione:</label>
                 <textarea class="form-control" id="description" name="description" rows="6">{{$comic->description}}</textarea>
               </div>
             </div>
@@ -79,7 +79,6 @@
           </form>
         </div>
       </div>
-
   </div>
   </form>
 

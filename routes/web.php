@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use League\CommonMark\Util\Configuration;
+use App\Models\Comic;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/', function () {
-    return view('home');
+    $comics = Comic::all();
+    return view('home', compact('comics'));
 })->name('home');
 
 Route::resource('comics', 'ComicController');
