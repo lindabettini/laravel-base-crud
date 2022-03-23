@@ -7,6 +7,9 @@
 </header>
 
 <div id="comics-list" class="row text-center justify-content-center">
+  @if(session('message'))
+  <div class="alert alert-success">{{(session('message'))}}</div>
+  @endif
   @foreach ($comics as $comic)
   <dic class="col-5 p-3 m-3">
     <a href="{{route('comics.show', $comic->id)}}">
