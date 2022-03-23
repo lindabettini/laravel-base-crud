@@ -49,6 +49,8 @@ class ComicController extends Controller
         $comic->description = $data['description'];
         $comic->price = $data['price'];
         $comic->save();
+
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
